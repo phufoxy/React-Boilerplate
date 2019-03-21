@@ -97,12 +97,9 @@ class CusinessPartial extends Component {
                     </h3>
                 </div>
                 <div className="b-block-main">
-                    {this
-                        .state
-                        .data
-                        .map((data, i) => (
-                            <Item key={i} data={data}></Item>
-                        ))}
+                    {this.state.data.map((data, i) => (
+                        <Item key={i} data={data}></Item>
+                    ))}
                 </div>
             </section>
         );

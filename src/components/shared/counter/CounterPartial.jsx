@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Item from './item/Item';
+
 class CounterPartial extends Component {
     constructor(props) {
         super(props);
@@ -39,12 +40,9 @@ class CounterPartial extends Component {
             <section className="b-page-counter" id="counter">
                 <div className="container">
                     <div className="b-block-main">
-                        {this
-                            .state
-                            .data
-                            .map((data, i) => (
-                                <Item key={i} data={data}></Item>
-                            ))}
+                        {this.state.data.map((data, i) => (
+                            <Item key={i} data={data}></Item>
+                        ))}
                     </div>
                 </div>
             </section>

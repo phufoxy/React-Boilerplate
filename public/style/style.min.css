@@ -942,9 +942,9 @@ body {
   position: relative;
   width: 40%;
 }
-.b-page-introduc .b-block .b-block-left .b-images  {
-position: relative;
-top: 20px;
+.b-page-introduc .b-block .b-block-left .b-images {
+  position: relative;
+  top: 0px;
 }
 .b-page-introduc .b-block .b-block-left .b-images img {
   width: 100%;
@@ -998,6 +998,7 @@ top: 20px;
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .b-page-eat .b-eat .b-block-content {
   width: 30%;

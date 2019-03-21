@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Item from './Item/Item';
+import Slider from "react-slick";
+
 class SliderPartial extends Component {
     constructor(props) {
         super(props);
@@ -27,18 +29,23 @@ class SliderPartial extends Component {
         }
     }
     render() {
+        var settings = {
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        };
         return (
             <section className="b-page-slider">
                 <div className="container">
-                    <div className="b-slider wow fadeInDown">
-                        {this
-                            .state
-                            .data
-                            .map((data, i) => (
-                                <Item key={i} data={data}></Item>
-                            ))
+                    <Slider {...settings} className="b-slider wow fadeInDown">
+                        {this.state.data.map((data, i) => (
+                            <Item key={i} data={data}></Item>
+                        ))
                         }
-                    </div>
+                    </Slider >
                 </div>
             </section>
         );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 class BannerPartial extends Component {
     render() {
         return (
@@ -13,7 +13,7 @@ class BannerPartial extends Component {
                             RECIPES
                         </h2>
                         <div className="b-btn">
-                            <a href="/" className="b-link waves-effect  waves-light">GET STARTED</a>
+                            <Link to="/" className="b-link waves-effect  waves-light">GET STARTED</Link>
                         </div>
                         <p className="b-text-norm">
                             OR SEND US YOUR OWN RECIPES AND GET REWARDED!

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 class HeaderLayout extends Component {
     render() {
         return (
@@ -7,17 +7,17 @@ class HeaderLayout extends Component {
                 <div className="container">
                     <div className="b-header">
                         <div className="b-logo">
-                            <a href="/" className="b-link">
+                            <Link to="/" className="b-link">
                                 <img src="./images/logo.png" alt="Log" />
-                            </a>
+                            </Link>
                         </div>
                         <div className="b-register">
                             <ul className="b-list-item">
                                 <li className="b-item">
-                                    <a href="/" className="b-link">LOGIN</a>
+                                    <Link to="/cusiness" className="b-link">CUSINESS</Link>
                                 </li>
                                 <li className="b-item">
-                                    <a href="/" className="b-link">SIGN UP</a>
+                                    <Link to="/eat" className="b-link">EAT</Link>
                                 </li>
                             </ul>
                         </div>

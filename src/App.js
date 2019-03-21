@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
-import IndexPage from './components/pages';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import routes from './routes';
 class App extends Component {
   render() {
     return (
-      <IndexPage></IndexPage>
+      <Router>
+        <Switch>
+          {routes.route.map((data, i) => (
+            <Route key={i} path={data.path} exact={data.exact} component={data.component}></Route>
+          ))}
+        </Switch>
+      </Router>
     );
   }
 }

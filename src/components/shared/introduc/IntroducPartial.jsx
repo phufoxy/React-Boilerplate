@@ -1,14 +1,31 @@
 import React, { Component } from 'react';
-
+import { Redirect } from 'react-router-dom';
 class IntroducPartial extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            redirect: false
+        }
+        this.onRedirect = this.onRedirect.bind(this);
+    }
+    onRedirect() {
+        this.setState({
+            redirect: !this.state.redirect
+        })
+    }
     render() {
+        if (this.state.redirect) {
+            return (
+                <Redirect to='/intro'></Redirect>
+            )
+        }
         return (
             <section className="b-page-introduc ">
                 <div className="container">
                     <div className="b-block">
                         <div className="b-block-left wow fadeInLeft">
                             <div className="b-images">
-                                <img src="./images/iphone.png" alt="Green" />
+                                <img src="./images/iphone.png" alt="Green" onClick={this.onRedirect} />
                             </div>
                         </div>
                         <div className="b-block-right wow fadeInRight">
