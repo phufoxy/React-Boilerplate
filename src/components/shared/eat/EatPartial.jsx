@@ -61,10 +61,11 @@ class EatPartial extends Component {
     }
     onUpdate(data) {
         const itemIndex = this.state.data.findIndex(i => i.id === data.id);
-        this.state.data[itemIndex].title = data.title;
-        this.state.data[itemIndex].description = data.description;
+        var dataEdit = this.state.data;
+        dataEdit[itemIndex].title = data.title;
+        dataEdit[itemIndex].description = data.description;
         this.setState({
-            data: this.state.data
+            data: dataEdit
         })
     }
     render() {
