@@ -1,4 +1,4 @@
-import { IndexPage, EatPage, IntroducPage, CusinessPage } from '../components/pages';
+import { IndexPage, EatPage, IntroducPage, CusinessPage, HomePage } from '../components/pages';
 const routes = {
     route: [
         {
@@ -12,6 +12,9 @@ const routes = {
         },
         {
             path: '/cusiness', exact: true, component: CusinessPage
+        },
+        {
+            path: '/home', exact: true, component: HomePage
         },
     ]
 }

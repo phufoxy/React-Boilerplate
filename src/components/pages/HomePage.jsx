@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { HeaderLayout, FooterLayout } from '../layouts';
 import {
     BannerPartial,
-    CusinessPartial,
+    PersonComponent,
     CounterPartial
 } from '../shared';
-class CusinessPage extends Component {
+class HomePage extends Component {
     render() {
         return (
             <div className="wrapper">
                 <HeaderLayout></HeaderLayout>
                 <BannerPartial></BannerPartial>
-                <CusinessPartial></CusinessPartial>
+                <PersonComponent></PersonComponent>
                 <CounterPartial></CounterPartial>
                 <FooterLayout></FooterLayout>
             </div>
@@ -19,4 +19,4 @@ class CusinessPage extends Component {
     }
 }
 
-export default CusinessPage;
+export default HomePage;

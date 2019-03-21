@@ -2,4 +2,5 @@ import IndexPage from './IndexPage';
 import EatPage from './EatPage';
 import IntroducPage from './IntroducPage';
 import CusinessPage from './CusinessPage';
-export { IndexPage, EatPage, IntroducPage, CusinessPage };
+import HomePage from './HomePage';
+export { IndexPage, EatPage, IntroducPage, CusinessPage, HomePage };

@@ -19,6 +19,9 @@ class HeaderLayout extends Component {
                                 <li className="b-item">
                                     <Link to="/eat" className="b-link">EAT</Link>
                                 </li>
+                                <li className="b-item">
+                                    <Link to="/home" className="b-link">HOME</Link>
+                                </li>
                             </ul>
                         </div>
                         <div className="b-toggle">
