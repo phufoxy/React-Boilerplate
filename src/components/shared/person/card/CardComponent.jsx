@@ -5,11 +5,17 @@ class CardComponent extends Component {
     constructor(props) {
         super(props);
         this.onDelete = this.onDelete.bind(this);
+        this.onEdit = this.onEdit.bind(this);
     }
     onDelete() {
         this.props.onDelete(this.props.person.id);
     }
+    onEdit() {
+        this.props.onEdit(this.props.person.id);
+    }
+
     render() {
+        console.log(this.props.person)
         return (
             <div className="col-lg-4 mt-2">
                 <Card>
@@ -20,7 +26,7 @@ class CardComponent extends Component {
                             {this.props.person.address}.
                         </Card.Text>
                         <Button variant="danger" onClick={this.onDelete}>Delete</Button>
-                        <Button variant="info">Edit</Button>
+                        <Button variant="info" onClick={this.onEdit}>Edit</Button>
                     </Card.Body>
                 </Card>
             </div>
